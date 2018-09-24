@@ -30,10 +30,10 @@
             <th scope="row"><?= __('Other Details') ?></th>
             <td><?= h($customer->other_details) ?></td>
         </tr>
-        <tr>
+        <!--<tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($customer->id) ?></td>
-        </tr>
+        </tr>-->
         <tr>
             <th scope="row"><?= __('Number') ?></th>
             <td><?= $this->Number->format($customer->number) ?></td>

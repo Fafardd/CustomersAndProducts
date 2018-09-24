@@ -22,10 +22,10 @@
             <th scope="row"><?= __('Description') ?></th>
             <td><?= h($type->description) ?></td>
         </tr>
-        <tr>
+        <!--<tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($type->id) ?></td>
-        </tr>
+        </tr>-->
     </table>
     <div class="related">
         <h4><?= __('Related Products') ?></h4>

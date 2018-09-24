@@ -32,10 +32,10 @@
             <th scope="row"><?= __('Other Details') ?></th>
             <td><?= h($customerProduct->other_details) ?></td>
         </tr>
-        <tr>
+        <!--<tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($customerProduct->id) ?></td>
-        </tr>
+        </tr>-->
         <tr>
             <th scope="row"><?= __('Date') ?></th>
             <td><?= h($customerProduct->date) ?></td>

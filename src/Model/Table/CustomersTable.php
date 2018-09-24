@@ -9,6 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Customers Model
  *
+ * @property |\Cake\ORM\Association\HasMany $CustomerAddress
  * @property \App\Model\Table\CustomerProductTable|\Cake\ORM\Association\HasMany $CustomerProduct
  *
  * @method \App\Model\Entity\Customer get($primaryKey, $options = [])
@@ -41,6 +42,9 @@ class CustomersTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->hasMany('CustomerAddress', [
+            'foreignKey' => 'customer_id'
+        ]);
         $this->hasMany('CustomerProduct', [
             'foreignKey' => 'customer_id'
         ]);

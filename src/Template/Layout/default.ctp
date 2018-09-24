@@ -51,13 +51,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                         <?php
                         $loguser = $this->request->getSession()->read('Auth.User');
                         if ($loguser) {
-                            $user = $loguser['email'];
-                            echo $this->Html->link($user . ' logout', ['controller' => 'Users', 'action' => 'logout']);
+                            $user = $loguser['email'];?>
+                            <li><?php echo $this ->Html->link($user, ['controller' => 'Users', 'action' => 'view', $loguser['id']]);?></li>
+                            <li><?php echo $this->Html->link('Logout', ['controller' => 'Users', 'action' => 'logout']);?></li><?php
                         } else {
                             echo $this->Html->link('login', ['controller' => 'Users', 'action' => 'login']);
                         }
                         ?>
                     </li>
+                <li><?php echo $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false])?></li>
                 <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>

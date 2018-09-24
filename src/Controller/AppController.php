@@ -84,12 +84,16 @@ class AppController extends Controller {
         // By default deny access.
         $action = $this->request->getParam('action');
         
-        if(in_array($action, ['add', 'edit', 'delete'])){
+        if(in_array($action, ['add'])){
+            if(strpos(($user['email']), 'vendeur') !==false || strpos(($user['email']), 'admin') !==false){
+                return true;
+            }
+        }else if(in_array($action, ['edit', 'delete'])){
             if(strpos(($user['email']), 'admin') !==false ){
                 return true;
-            } else {
-                return false;
             }
+        } else if(in_array($action, ['view'])){
+            return true;
         } else {
             return false;
         }
