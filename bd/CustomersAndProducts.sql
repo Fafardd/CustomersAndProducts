@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Dim 23 Septembre 2018 à 20:09
+-- Généré le :  Lun 24 Septembre 2018 à 16:30
 -- Version du serveur :  5.6.37
 -- Version de PHP :  7.1.8
 
@@ -34,14 +34,14 @@ CREATE TABLE IF NOT EXISTS `customers` (
   `other_details` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `customers`
 --
 
 INSERT INTO `customers` (`id`, `number`, `name`, `phone`, `other_details`, `created`, `modified`) VALUES
-(1, 12345, 'Kevin Fafard', '5145145144', 'Jeune gamer', '2018-09-21 14:56:15', '2018-09-21 14:56:15');
+(2, 12345, 'Kevin Fafard', '5145145144', 'Jeune gamer', '2018-09-24 15:34:21', '2018-09-24 15:34:21');
 
 -- --------------------------------------------------------
 
@@ -58,13 +58,6 @@ CREATE TABLE IF NOT EXISTS `customer_product` (
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Contenu de la table `customer_product`
---
-
-INSERT INTO `customer_product` (`id`, `customer_id`, `product_id`, `date`, `other_details`, `created`, `modified`) VALUES
-(1, 1, 2, '2018-09-21', 'Achat fait en ligne', '2018-09-21 14:56:27', '2018-09-21 14:56:27');
 
 -- --------------------------------------------------------
 
@@ -121,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `users`
@@ -136,7 +129,8 @@ INSERT INTO `users` (`id`, `email`, `password`, `created`, `modified`) VALUES
 (6, 'adminadmin@admin.com', '$2y$10$CES/AEN5R.NbZY4E.DySGuIRICb4kTDOFmEgevW6PhYmXVyIMeZsu', '2018-09-21 13:26:16', '2018-09-21 13:26:16'),
 (7, 'qwerty@test.com', '$2y$10$2sgh.IS1f8jGd03mW0asdO6f4TZ/JuNHEELDmHfsH8XXuSCV9vEPW', '2018-09-21 13:28:53', '2018-09-21 13:28:53'),
 (8, 'kevin1@hotmail.com', '$2y$10$ZJU2KT4X4OXjkUAsKfIVAO3SGP5Xal2UrdkR6crUT9sa.Tk0aJcZ.', '2018-09-21 13:31:04', '2018-09-21 13:31:04'),
-(9, 'asdf@hotmail.com', '$2y$10$.ysGUzIEbEBkdb/QoCJNSumAIznAot.9KobFaRxPqqDs7a2oArRhG', '2018-09-21 13:32:35', '2018-09-21 13:32:35');
+(9, 'asdf@hotmail.com', '$2y$10$.ysGUzIEbEBkdb/QoCJNSumAIznAot.9KobFaRxPqqDs7a2oArRhG', '2018-09-21 13:32:35', '2018-09-21 13:32:35'),
+(10, 'kev@vendeur.com', '$2y$10$DSHtMisx9SoEO2hA.42wJufjtmaLojbb1BoEpBGjLkSXPRp1f1ZGa', '2018-09-24 15:01:15', '2018-09-24 15:01:15');
 
 --
 -- Index pour les tables exportées
@@ -183,7 +177,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `customer_product`
 --
@@ -203,7 +197,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- Contraintes pour les tables exportées
 --
