@@ -12,6 +12,8 @@
         <li><?= $this->Html->link(__('New Type'), ['controller' => 'Types', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Customer Product'), ['controller' => 'CustomerProduct', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Customer Product'), ['controller' => 'CustomerProduct', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Product File'), ['controller' => 'ProductFile', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Product File'), ['controller' => 'ProductFile', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="products index large-9 medium-8 columns content">
@@ -19,7 +21,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
+                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>

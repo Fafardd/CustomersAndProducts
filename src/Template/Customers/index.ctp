@@ -30,7 +30,7 @@
         <tbody>
             <?php foreach ($customers as $customer): ?>
             <tr>
-                <td><?= $this->Number->format($customer->id) ?></td>
+                <!--<td><?= $this->Number->format($customer->id) ?></td>-->
                 <td><?= $this->Number->format($customer->number) ?></td>
                 <td><?= h($customer->name) ?></td>
                 <td><?= h($customer->phone) ?></td>

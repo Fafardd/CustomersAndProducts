@@ -23,8 +23,8 @@
             <td><?= h($type->description) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($type->id) ?></td>
+            <!--<th scope="row"><?= __('Id') ?></th>-->
+            <!--<td><?= $this->Number->format($type->id) ?></td>-->
         </tr>
     </table>
     <div class="related">

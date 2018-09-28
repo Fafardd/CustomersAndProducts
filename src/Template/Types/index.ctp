@@ -17,7 +17,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('description') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -25,7 +25,7 @@
         <tbody>
             <?php foreach ($types as $type): ?>
             <tr>
-                <td><?= $this->Number->format($type->id) ?></td>
+                <!--<td><?= $this->Number->format($type->id) ?></td>-->
                 <td><?= h($type->description) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $type->id]) ?>

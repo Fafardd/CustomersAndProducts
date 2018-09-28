@@ -51,8 +51,8 @@ class ProductsFixture extends TestFixture
                 'id' => 1,
                 'name' => 'Lorem ipsum dolor sit amet',
                 'price' => 1,
-                'created' => '2018-09-21 14:52:44',
-                'modified' => '2018-09-21 14:52:44',
+                'created' => '2018-09-28 14:16:52',
+                'modified' => '2018-09-28 14:16:52',
                 'type_id' => 1,
                 'color' => 'Lorem ipsum dolor sit amet',
                 'store_quantity' => 1

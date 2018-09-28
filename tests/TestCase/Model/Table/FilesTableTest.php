@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\ProductsTable;
+use App\Model\Table\FilesTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\ProductsTable Test Case
+ * App\Model\Table\FilesTable Test Case
  */
-class ProductsTableTest extends TestCase
+class FilesTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\ProductsTable
+     * @var \App\Model\Table\FilesTable
      */
-    public $Products;
+    public $Files;
 
     /**
      * Fixtures
@@ -24,9 +24,7 @@ class ProductsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.products',
-        'app.types',
-        'app.customer_product',
+        'app.files',
         'app.product_file'
     ];
 
@@ -38,8 +36,8 @@ class ProductsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Products') ? [] : ['className' => ProductsTable::class];
-        $this->Products = TableRegistry::getTableLocator()->get('Products', $config);
+        $config = TableRegistry::getTableLocator()->exists('Files') ? [] : ['className' => FilesTable::class];
+        $this->Files = TableRegistry::getTableLocator()->get('Files', $config);
     }
 
     /**
@@ -49,7 +47,7 @@ class ProductsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Products);
+        unset($this->Files);
 
         parent::tearDown();
     }
@@ -70,16 +68,6 @@ class ProductsTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

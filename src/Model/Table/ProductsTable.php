@@ -11,6 +11,7 @@ use Cake\Validation\Validator;
  *
  * @property \App\Model\Table\TypesTable|\Cake\ORM\Association\BelongsTo $Types
  * @property \App\Model\Table\CustomerProductTable|\Cake\ORM\Association\HasMany $CustomerProduct
+ * @property \App\Model\Table\ProductFileTable|\Cake\ORM\Association\HasMany $ProductFile
  *
  * @method \App\Model\Entity\Product get($primaryKey, $options = [])
  * @method \App\Model\Entity\Product newEntity($data = null, array $options = [])
@@ -47,6 +48,9 @@ class ProductsTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->hasMany('CustomerProduct', [
+            'foreignKey' => 'product_id'
+        ]);
+        $this->hasMany('ProductFile', [
             'foreignKey' => 'product_id'
         ]);
     }
