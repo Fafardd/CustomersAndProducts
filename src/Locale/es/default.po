@@ -1,0 +1,614 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-09-28 12:14+0000\n"
+"PO-Revision-Date: 2018-09-28 08:15-0400\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.1.1\n"
+"Last-Translator: \n"
+"Language: fr_CA\n"
+
+#: Controller/AddressesController.php:55;79
+msgid "The address has been saved."
+msgstr "La dirección ha sido guardada."
+
+#: Controller/AddressesController.php:59;83
+msgid "The address could not be saved. Please, try again."
+msgstr "La dirección no se pudo guardar. Por favor, inténtalo de nuevo."
+
+#: Controller/AddressesController.php:100
+msgid "The address has been deleted."
+msgstr "La dirección ha sido borrada."
+
+#: Controller/AddressesController.php:102
+msgid "The address could not be deleted. Please, try again."
+msgstr "La dirección no pudo ser borrada. Por favor, inténtalo de nuevo."
+
+#: Controller/CustomerAddressController.php:58;84
+msgid "The customer addres has been saved."
+msgstr "La dirección del cliente ha sido guardada."
+
+#: Controller/CustomerAddressController.php:62;88
+msgid "The customer addres could not be saved. Please, try again."
+msgstr "La dirección del cliente no se pudo guardar. Por favor, inténtalo de nuevo."
+
+#: Controller/CustomerAddressController.php:107
+msgid "The customer addres has been deleted."
+msgstr "La dirección del cliente ha sido eliminada."
+
+#: Controller/CustomerAddressController.php:109
+msgid "The customer addres could not be deleted. Please, try again."
+msgstr "No se pudo eliminar la dirección del cliente. Por favor, inténtalo de nuevo."
+
+#: Controller/CustomerProductController.php:58;84
+msgid "The customer product has been saved."
+msgstr "El cliente ha sido salvado."
+
+#: Controller/CustomerProductController.php:62;88
+msgid "The customer product could not be saved. Please, try again."
+msgstr "El producto del cliente no se pudo guardar. Por favor, inténtalo de nuevo."
+
+#: Controller/CustomerProductController.php:107
+msgid "The customer product has been deleted."
+msgstr "El producto del cliente ha sido eliminado."
+
+#: Controller/CustomerProductController.php:109
+msgid "The customer product could not be deleted. Please, try again."
+msgstr "El producto del cliente no se pudo eliminar. Por favor, inténtalo de nuevo."
+
+#: Controller/CustomersController.php:55;79
+msgid "The customer has been saved."
+msgstr "El cliente ha sido salvado."
+
+#: Controller/CustomersController.php:59;83
+msgid "The customer could not be saved. Please, try again."
+msgstr "El cliente no pudo ser salvado. Por favor, inténtalo de nuevo."
+
+#: Controller/CustomersController.php:100
+msgid "The customer has been deleted."
+msgstr "El cliente ha sido eliminado."
+
+#: Controller/CustomersController.php:102
+msgid "The customer could not be deleted. Please, try again."
+msgstr "El cliente no pudo ser eliminado. Por favor, inténtalo de nuevo."
+
+#: Controller/ProductsController.php:58;83
+msgid "The product has been saved."
+msgstr "El producto ha sido guardado."
+
+#: Controller/ProductsController.php:62;87
+msgid "The product could not be saved. Please, try again."
+msgstr "El producto no pudo ser guardado. Por favor, inténtalo de nuevo."
+
+#: Controller/ProductsController.php:105
+msgid "The product has been deleted."
+msgstr "El producto ha sido eliminado."
+
+#: Controller/ProductsController.php:107
+msgid "The product could not be deleted. Please, try again."
+msgstr "El producto no pudo ser eliminado. Por favor, inténtalo de nuevo."
+
+#: Controller/TypeControllergfdsgdsfg.php:55;79
+#: Controller/TypesController.php:55;79
+msgid "The type has been saved."
+msgstr "El tipo se ha guardado."
+
+#: Controller/TypeControllergfdsgdsfg.php:59;83
+#: Controller/TypesController.php:59;83
+msgid "The type could not be saved. Please, try again."
+msgstr "El tipo no se pudo guardar. Por favor, inténtalo de nuevo."
+
+#: Controller/TypeControllergfdsgdsfg.php:100
+#: Controller/TypesController.php:100
+msgid "The type has been deleted."
+msgstr "El tipo ha sido eliminado."
+
+#: Controller/TypeControllergfdsgdsfg.php:102
+#: Controller/TypesController.php:102
+msgid "The type could not be deleted. Please, try again."
+msgstr "El tipo no se pudo eliminar. Por favor, inténtalo de nuevo."
+
+#: Controller/UsersController.php:71;94
+msgid "The user has been saved."
+msgstr "El usuario ha sido guardado."
+
+#: Controller/UsersController.php:75;98
+msgid "The user could not be saved. Please, try again."
+msgstr "El usuario no pudo ser guardado. Por favor, inténtalo de nuevo."
+
+#: Controller/UsersController.php:114
+msgid "The user has been deleted."
+msgstr "El usuario ha sido eliminado."
+
+#: Controller/UsersController.php:116
+msgid "The user could not be deleted. Please, try again."
+msgstr "El usuario no pudo ser eliminado. Por favor, inténtalo de nuevo."
+
+#: Template/Addresses/add.ctp:9 Template/Addresses/edit.ctp:9
+#: Template/Addresses/index.ctp:9;27 Template/Addresses/view.ctp:9;57
+#: Template/CustomerAddress/add.ctp:9 Template/CustomerAddress/edit.ctp:9
+#: Template/CustomerAddress/index.ctp:9;24 Template/CustomerAddress/view.ctp:9
+#: Template/CustomerProduct/add.ctp:9 Template/CustomerProduct/edit.ctp:9
+#: Template/CustomerProduct/index.ctp:9;29 Template/CustomerProduct/view.ctp:9
+#: Template/Customers/add.ctp:9 Template/Customers/edit.ctp:9
+#: Template/Customers/index.ctp:9;27 Template/Customers/view.ctp:9;62
+#: Template/Products/add.ctp:9 Template/Products/edit.ctp:9
+#: Template/Products/index.ctp:9;30 Template/Products/view.ctp:9;68
+#: Template/Type/add.ctp:9 Template/Type/edit.ctp:9
+#: Template/Type/index.ctp:9;22 Template/Type/view.ctp:9;41
+#: Template/Types/add.ctp:9 Template/Types/edit.ctp:9
+#: Template/Types/index.ctp:9;22 Template/Types/view.ctp:9;41
+#: Template/Users/add.ctp:9 Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:9;23 Template/Users/view.ctp:9
+msgid "Actions"
+msgstr "valores"
+
+#: Template/Addresses/add.ctp:10 Template/Addresses/edit.ctp:16
+#: Template/Addresses/view.ctp:12 Template/CustomerAddress/add.ctp:13
+#: Template/CustomerAddress/edit.ctp:19 Template/CustomerAddress/index.ctp:13
+#: Template/CustomerAddress/view.ctp:16
+msgid "List Addresses"
+msgstr "Lista de direcciones"
+
+#: Template/Addresses/add.ctp:11 Template/Addresses/edit.ctp:17
+#: Template/Addresses/index.ctp:11 Template/Addresses/view.ctp:14
+#: Template/CustomerAddress/add.ctp:10 Template/CustomerAddress/edit.ctp:16
+#: Template/CustomerAddress/view.ctp:12
+msgid "List Customer Address"
+msgstr "Indique la dirección del cliente"
+
+#: Template/Addresses/add.ctp:12 Template/Addresses/edit.ctp:18
+#: Template/Addresses/index.ctp:12 Template/Addresses/view.ctp:15
+#: Template/CustomerAddress/index.ctp:10 Template/CustomerAddress/view.ctp:13
+msgid "New Customer Addres"
+msgstr "Nueva dirección de cliente"
+
+#: Template/Addresses/add.ctp:18
+msgid "Add Address"
+msgstr "Añadir dirección"
+
+#: Template/Addresses/add.ctp:28 Template/Addresses/edit.ctp:34
+#: Template/CustomerAddress/add.ctp:24 Template/CustomerAddress/edit.ctp:30
+#: Template/CustomerProduct/add.ctp:28 Template/CustomerProduct/edit.ctp:34
+#: Template/Customers/add.ctp:26 Template/Customers/edit.ctp:32
+#: Template/Products/add.ctp:29 Template/Products/edit.ctp:35
+#: Template/Type/add.ctp:23 Template/Type/edit.ctp:29 Template/Types/add.ctp:23
+#: Template/Types/edit.ctp:29 Template/Users/add.ctp:22
+#: Template/Users/edit.ctp:28
+msgid "Submit"
+msgstr "presentar"
+
+#: Template/Addresses/edit.ctp:11 Template/Addresses/index.ctp:43
+#: Template/Addresses/view.ctp:66 Template/CustomerAddress/edit.ctp:11
+#: Template/CustomerAddress/index.ctp:35 Template/CustomerProduct/edit.ctp:11
+#: Template/CustomerProduct/index.ctp:45 Template/Customers/edit.ctp:11
+#: Template/Customers/index.ctp:43 Template/Customers/view.ctp:76
+#: Template/Products/edit.ctp:11 Template/Products/index.ctp:47
+#: Template/Products/view.ctp:82 Template/Type/edit.ctp:11
+#: Template/Type/index.ctp:33 Template/Type/view.ctp:54
+#: Template/Types/edit.ctp:11 Template/Types/index.ctp:33
+#: Template/Types/view.ctp:54 Template/Users/edit.ctp:11
+#: Template/Users/index.ctp:37
+msgid "Delete"
+msgstr "borrar"
+
+#: Template/Addresses/edit.ctp:13 Template/Addresses/index.ctp:43
+#: Template/Addresses/view.ctp:11;66 Template/CustomerAddress/edit.ctp:13
+#: Template/CustomerAddress/index.ctp:35 Template/CustomerAddress/view.ctp:11
+#: Template/CustomerProduct/edit.ctp:13 Template/CustomerProduct/index.ctp:45
+#: Template/CustomerProduct/view.ctp:11 Template/Customers/edit.ctp:13
+#: Template/Customers/index.ctp:43 Template/Customers/view.ctp:11;76
+#: Template/Products/edit.ctp:13 Template/Products/index.ctp:47
+#: Template/Products/view.ctp:11;82 Template/Type/edit.ctp:13
+#: Template/Type/index.ctp:33 Template/Type/view.ctp:11;54
+#: Template/Types/edit.ctp:13 Template/Types/index.ctp:33
+#: Template/Types/view.ctp:11;54 Template/Users/edit.ctp:13
+#: Template/Users/index.ctp:37 Template/Users/view.ctp:11
+msgid "Are you sure you want to delete # {0}?"
+msgstr "¿Estás seguro de que quieres eliminar # {0} ?"
+
+#: Template/Addresses/edit.ctp:24 Template/Addresses/view.ctp:10
+msgid "Edit Address"
+msgstr "Editar dirección"
+
+#: Template/Addresses/index.ctp:10 Template/Addresses/view.ctp:13
+#: Template/CustomerAddress/add.ctp:14 Template/CustomerAddress/edit.ctp:20
+#: Template/CustomerAddress/index.ctp:14 Template/CustomerAddress/view.ctp:17
+msgid "New Address"
+msgstr "Nueva direccion"
+
+#: Template/Addresses/index.ctp:16
+msgid "Addresses"
+msgstr "direcciones"
+
+#: Template/Addresses/index.ctp:41 Template/Addresses/view.ctp:64
+#: Template/CustomerAddress/index.ctp:33 Template/CustomerProduct/index.ctp:43
+#: Template/Customers/index.ctp:41 Template/Customers/view.ctp:74
+#: Template/Products/index.ctp:45 Template/Products/view.ctp:80
+#: Template/Type/index.ctp:31 Template/Type/view.ctp:52
+#: Template/Types/index.ctp:31 Template/Types/view.ctp:52
+#: Template/Users/index.ctp:35
+msgid "View"
+msgstr "vista"
+
+#: Template/Addresses/index.ctp:42 Template/Addresses/view.ctp:65
+#: Template/CustomerAddress/index.ctp:34 Template/CustomerProduct/index.ctp:44
+#: Template/Customers/index.ctp:42 Template/Customers/view.ctp:75
+#: Template/Products/index.ctp:46 Template/Products/view.ctp:81
+#: Template/Type/index.ctp:32 Template/Type/view.ctp:53
+#: Template/Types/index.ctp:32 Template/Types/view.ctp:53
+#: Template/Users/index.ctp:36
+msgid "Edit"
+msgstr "editar"
+
+#: Template/Addresses/index.ctp:51 Template/CustomerAddress/index.ctp:43
+#: Template/CustomerProduct/index.ctp:53 Template/Customers/index.ctp:51
+#: Template/Products/index.ctp:55 Template/Type/index.ctp:41
+#: Template/Types/index.ctp:41 Template/Users/index.ctp:45
+msgid "first"
+msgstr "primero"
+
+#: Template/Addresses/index.ctp:52 Template/CustomerAddress/index.ctp:44
+#: Template/CustomerProduct/index.ctp:54 Template/Customers/index.ctp:52
+#: Template/Products/index.ctp:56 Template/Type/index.ctp:42
+#: Template/Types/index.ctp:42 Template/Users/index.ctp:46
+msgid "previous"
+msgstr "anterior"
+
+#: Template/Addresses/index.ctp:54 Template/CustomerAddress/index.ctp:46
+#: Template/CustomerProduct/index.ctp:56 Template/Customers/index.ctp:54
+#: Template/Products/index.ctp:58 Template/Type/index.ctp:44
+#: Template/Types/index.ctp:44 Template/Users/index.ctp:48
+msgid "next"
+msgstr "siguiente"
+
+#: Template/Addresses/index.ctp:55 Template/CustomerAddress/index.ctp:47
+#: Template/CustomerProduct/index.ctp:57 Template/Customers/index.ctp:55
+#: Template/Products/index.ctp:59 Template/Type/index.ctp:45
+#: Template/Types/index.ctp:45 Template/Users/index.ctp:49
+msgid "last"
+msgstr "pasado"
+
+#: Template/Addresses/index.ctp:57 Template/CustomerAddress/index.ctp:49
+#: Template/CustomerProduct/index.ctp:59 Template/Customers/index.ctp:57
+#: Template/Products/index.ctp:61 Template/Type/index.ctp:47
+#: Template/Types/index.ctp:47 Template/Users/index.ctp:51
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr "La página {{página}} de {{páginas}}, mostrando {{actual}} registros de {{conteo}} total"
+
+#: Template/Addresses/view.ctp:11
+msgid "Delete Address"
+msgstr "Eliminar direccion"
+
+#: Template/Addresses/view.ctp:22
+msgid "Street Name"
+msgstr "Nombre de la calle"
+
+#: Template/Addresses/view.ctp:26
+msgid "City"
+msgstr "ciudad"
+
+#: Template/Addresses/view.ctp:30
+msgid "Zipcode"
+msgstr "código postal"
+
+#: Template/Addresses/view.ctp:34
+msgid "State"
+msgstr "estado"
+
+#: Template/Addresses/view.ctp:38
+msgid "Country"
+msgstr "país"
+
+#: Template/Addresses/view.ctp:42 Template/CustomerProduct/view.ctp:36
+#: Template/Customers/view.ctp:34;55 Template/Products/view.ctp:36;61
+#: Template/Type/view.ctp:26;35 Template/Types/view.ctp:26;35
+#: Template/Users/view.ctp:28
+msgid "Id"
+msgstr "identificación"
+
+#: Template/Addresses/view.ctp:46
+msgid "Building Number"
+msgstr "Número de edificio"
+
+#: Template/Addresses/view.ctp:51
+msgid "Related Customer Address"
+msgstr "Dirección del cliente relacionada"
+
+#: Template/Addresses/view.ctp:55 Template/Customers/view.ctp:56
+#: Template/Products/view.ctp:62
+msgid "Customer Id"
+msgstr "Identificación del cliente"
+
+#: Template/Addresses/view.ctp:56
+msgid "Address Id"
+msgstr "ID de dirección"
+
+#: Template/CustomerAddress/add.ctp:11 Template/CustomerAddress/edit.ctp:17
+#: Template/CustomerAddress/index.ctp:11 Template/CustomerAddress/view.ctp:14
+#: Template/CustomerProduct/add.ctp:11 Template/CustomerProduct/edit.ctp:17
+#: Template/CustomerProduct/index.ctp:11 Template/CustomerProduct/view.ctp:14
+#: Template/Customers/add.ctp:10 Template/Customers/edit.ctp:16
+#: Template/Customers/view.ctp:12
+msgid "List Customers"
+msgstr "Lista de clientes"
+
+#: Template/CustomerAddress/add.ctp:12 Template/CustomerAddress/edit.ctp:18
+#: Template/CustomerAddress/index.ctp:12 Template/CustomerAddress/view.ctp:15
+#: Template/CustomerProduct/add.ctp:12 Template/CustomerProduct/edit.ctp:18
+#: Template/CustomerProduct/index.ctp:12 Template/CustomerProduct/view.ctp:15
+#: Template/Customers/index.ctp:10 Template/Customers/view.ctp:13
+msgid "New Customer"
+msgstr "Nuevo cliente"
+
+#: Template/CustomerAddress/add.ctp:20
+msgid "Add Customer Addres"
+msgstr "Añadir dirección al cliente"
+
+#: Template/CustomerAddress/edit.ctp:26 Template/CustomerAddress/view.ctp:10
+msgid "Edit Customer Addres"
+msgstr "Editar la dirección del cliente"
+
+#: Template/CustomerAddress/index.ctp:18
+msgid "Customer Address"
+msgstr "Dirección del cliente"
+
+#: Template/CustomerAddress/view.ctp:11
+msgid "Delete Customer Addres"
+msgstr "Eliminar la dirección del cliente"
+
+#: Template/CustomerAddress/view.ctp:24 Template/CustomerProduct/view.ctp:24
+msgid "Customer"
+msgstr "cliente"
+
+#: Template/CustomerAddress/view.ctp:28
+msgid "Address"
+msgstr "dirección"
+
+#: Template/CustomerProduct/add.ctp:10 Template/CustomerProduct/edit.ctp:16
+#: Template/CustomerProduct/view.ctp:12 Template/Customers/add.ctp:11
+#: Template/Customers/edit.ctp:17 Template/Customers/index.ctp:11
+#: Template/Customers/view.ctp:14 Template/Products/add.ctp:13
+#: Template/Products/edit.ctp:19 Template/Products/index.ctp:13
+#: Template/Products/view.ctp:16
+msgid "List Customer Product"
+msgstr "Lista del producto del cliente"
+
+#: Template/CustomerProduct/add.ctp:13 Template/CustomerProduct/edit.ctp:19
+#: Template/CustomerProduct/index.ctp:13 Template/CustomerProduct/view.ctp:16
+#: Template/Products/add.ctp:10 Template/Products/edit.ctp:16
+#: Template/Products/view.ctp:12 Template/Type/add.ctp:11
+#: Template/Type/edit.ctp:17 Template/Type/index.ctp:11
+#: Template/Type/view.ctp:14 Template/Types/add.ctp:11
+#: Template/Types/edit.ctp:17 Template/Types/index.ctp:11
+#: Template/Types/view.ctp:14
+msgid "List Products"
+msgstr "Lista de Productos"
+
+#: Template/CustomerProduct/add.ctp:14 Template/CustomerProduct/edit.ctp:20
+#: Template/CustomerProduct/index.ctp:14 Template/CustomerProduct/view.ctp:17
+#: Template/Products/index.ctp:10 Template/Products/view.ctp:13
+#: Template/Type/add.ctp:12 Template/Type/edit.ctp:18
+#: Template/Type/index.ctp:12 Template/Type/view.ctp:15
+#: Template/Types/add.ctp:12 Template/Types/edit.ctp:18
+#: Template/Types/index.ctp:12 Template/Types/view.ctp:15
+msgid "New Product"
+msgstr "Nuevo producto"
+
+#: Template/CustomerProduct/add.ctp:20
+msgid "Add Customer Product"
+msgstr "Añadir producto al cliente"
+
+#: Template/CustomerProduct/edit.ctp:26 Template/CustomerProduct/view.ctp:10
+msgid "Edit Customer Product"
+msgstr "Editar producto del cliente"
+
+#: Template/CustomerProduct/index.ctp:10 Template/CustomerProduct/view.ctp:13
+#: Template/Customers/add.ctp:12 Template/Customers/edit.ctp:18
+#: Template/Customers/index.ctp:12 Template/Customers/view.ctp:15
+#: Template/Products/add.ctp:14 Template/Products/edit.ctp:20
+#: Template/Products/index.ctp:14 Template/Products/view.ctp:17
+msgid "New Customer Product"
+msgstr "Nuevo producto de cliente"
+
+#: Template/CustomerProduct/index.ctp:18
+msgid "Customer Product"
+msgstr "Producto del cliente"
+
+#: Template/CustomerProduct/view.ctp:11
+msgid "Delete Customer Product"
+msgstr "Eliminar producto del cliente"
+
+#: Template/CustomerProduct/view.ctp:28
+msgid "Product"
+msgstr "producto"
+
+#: Template/CustomerProduct/view.ctp:32 Template/Customers/view.ctp:30;59
+#: Template/Products/view.ctp:65
+msgid "Other Details"
+msgstr "Otros detalles"
+
+#: Template/CustomerProduct/view.ctp:40 Template/Customers/view.ctp:58
+#: Template/Products/view.ctp:64
+msgid "Date"
+msgstr "fecha"
+
+#: Template/CustomerProduct/view.ctp:44 Template/Customers/view.ctp:42;60
+#: Template/Products/view.ctp:48;66 Template/Type/view.ctp:38
+#: Template/Types/view.ctp:38 Template/Users/view.ctp:32
+msgid "Created"
+msgstr "creado"
+
+#: Template/CustomerProduct/view.ctp:48 Template/Customers/view.ctp:46;61
+#: Template/Products/view.ctp:52;67 Template/Type/view.ctp:39
+#: Template/Types/view.ctp:39 Template/Users/view.ctp:36
+msgid "Modified"
+msgstr "modificado"
+
+#: Template/Customers/add.ctp:18
+msgid "Add Customer"
+msgstr "Añadir cliente"
+
+#: Template/Customers/edit.ctp:24 Template/Customers/view.ctp:10
+msgid "Edit Customer"
+msgstr "Editar cliente"
+
+#: Template/Customers/index.ctp:16
+msgid "Customers"
+msgstr "clientes"
+
+#: Template/Customers/view.ctp:11
+msgid "Delete Customer"
+msgstr "Eliminar cliente"
+
+#: Template/Customers/view.ctp:22 Template/Products/view.ctp:24
+#: Template/Type/view.ctp:36 Template/Types/view.ctp:36
+msgid "Name"
+msgstr "nombre"
+
+#: Template/Customers/view.ctp:26
+msgid "Phone"
+msgstr "teléfono"
+
+#: Template/Customers/view.ctp:38
+msgid "Number"
+msgstr "número"
+
+#: Template/Customers/view.ctp:51 Template/Products/view.ctp:57
+msgid "Related Customer Product"
+msgstr "Producto relacionado del cliente"
+
+#: Template/Customers/view.ctp:57 Template/Products/view.ctp:63
+msgid "Product Id"
+msgstr "Identificación del producto"
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr "error"
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr "espalda"
+
+#: Template/Products/add.ctp:11 Template/Products/edit.ctp:17
+#: Template/Products/index.ctp:11 Template/Products/view.ctp:14
+#: Template/Types/add.ctp:10 Template/Types/edit.ctp:16
+#: Template/Types/view.ctp:12
+msgid "List Types"
+msgstr "Tipos de lista"
+
+#: Template/Products/add.ctp:12 Template/Products/edit.ctp:18
+#: Template/Products/index.ctp:12 Template/Products/view.ctp:15
+#: Template/Type/index.ctp:10 Template/Type/view.ctp:13
+#: Template/Types/index.ctp:10 Template/Types/view.ctp:13
+msgid "New Type"
+msgstr "Nuevo tipo"
+
+#: Template/Products/add.ctp:20
+msgid "Add Product"
+msgstr "Añadir producto"
+
+#: Template/Products/edit.ctp:26 Template/Products/view.ctp:10
+msgid "Edit Product"
+msgstr "Editar producto"
+
+#: Template/Products/index.ctp:18
+msgid "Products"
+msgstr "productos"
+
+#: Template/Products/view.ctp:11
+msgid "Delete Product"
+msgstr "Eliminar producto"
+
+#: Template/Products/view.ctp:28 Template/Type/index.ctp:16
+msgid "Type"
+msgstr "tipo"
+
+#: Template/Products/view.ctp:32
+msgid "Color"
+msgstr "color"
+
+#: Template/Products/view.ctp:40 Template/Type/view.ctp:37
+#: Template/Types/view.ctp:37
+msgid "Price"
+msgstr "precio"
+
+#: Template/Products/view.ctp:44
+msgid "Store Quantity"
+msgstr "Cantidad de tiendas"
+
+#: Template/Type/add.ctp:10 Template/Type/edit.ctp:16 Template/Type/view.ctp:12
+msgid "List Type"
+msgstr "Tipo de lista"
+
+#: Template/Type/add.ctp:18 Template/Types/add.ctp:18
+msgid "Add Type"
+msgstr "Añadir tipo"
+
+#: Template/Type/edit.ctp:24 Template/Type/view.ctp:10
+#: Template/Types/edit.ctp:24 Template/Types/view.ctp:10
+msgid "Edit Type"
+msgstr "Tipo de edición"
+
+#: Template/Type/view.ctp:11 Template/Types/view.ctp:11
+msgid "Delete Type"
+msgstr "Eliminar tipo"
+
+#: Template/Type/view.ctp:22 Template/Types/view.ctp:22
+msgid "Description"
+msgstr "descripción"
+
+#: Template/Type/view.ctp:31 Template/Types/view.ctp:31
+msgid "Related Products"
+msgstr "Productos relacionados"
+
+#: Template/Type/view.ctp:40 Template/Types/view.ctp:40
+msgid "Type Id"
+msgstr "Tipo de identificación"
+
+#: Template/Types/index.ctp:16
+msgid "Types"
+msgstr "tipos"
+
+#: Template/Users/add.ctp:10 Template/Users/edit.ctp:16
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr "Lista de Usuarios"
+
+#: Template/Users/add.ctp:16
+msgid "Add User"
+msgstr "Añadir usuario"
+
+#: Template/Users/edit.ctp:22 Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr "Editar usuario"
+
+#: Template/Users/index.ctp:10 Template/Users/view.ctp:13
+msgid "New User"
+msgstr "Nuevo usuario"
+
+#: Template/Users/index.ctp:14
+msgid "Users"
+msgstr "usuarios"
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr "Eliminar usuario"
+
+#: Template/Users/view.ctp:20
+msgid "Email"
+msgstr "e-mail"
+
+#: Template/Users/view.ctp:24
+msgid "Password"
+msgstr "contraseña"
+
