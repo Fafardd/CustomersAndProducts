@@ -21,7 +21,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
@@ -35,7 +35,7 @@
         <tbody>
             <?php foreach ($products as $product): ?>
             <tr>
-                <td><?= $this->Number->format($product->id) ?></td>
+                <!--<td><?= $this->Number->format($product->id) ?></td>-->
                 <td><?= h($product->name) ?></td>
                 <td><?= $this->Number->format($product->price) ?></td>
                 <td><?= h($product->created) ?></td>

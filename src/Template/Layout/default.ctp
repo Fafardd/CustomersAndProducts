@@ -62,6 +62,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><?php echo $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false])?></li>
                 <li><?php echo $this->Html->link('Anglais', ['action' => 'changeLang', 'en_US'], ['escape' => false])?></li>
                 <li><?php echo $this->Html->link('Espagnole', ['action' => 'changeLang', 'es'], ['escape' => false])?></li>
+                <li>
+					<?= $this->Html->link('A propos', ['controller' => 'Users', 'action' => 'aPropos']); ?>
+				</li>
                 <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>

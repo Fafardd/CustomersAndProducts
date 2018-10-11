@@ -35,6 +35,7 @@ class ProductsTable extends Table
      */
     public function initialize(array $config)
     {
+        $this->addBehavior('Translate', ['fields' => ['name']]);
         parent::initialize($config);
 
         $this->setTable('products');

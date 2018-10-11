@@ -2,10 +2,10 @@
 -- version 4.4.15.9
 -- https://www.phpmyadmin.net
 --
--- Client :  localhost
--- Généré le :  Lun 24 Septembre 2018 à 16:30
--- Version du serveur :  5.6.37
--- Version de PHP :  7.1.8
+-- Host: localhost
+-- Generation Time: Oct 11, 2018 at 12:08 AM
+-- Server version: 5.6.37
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `CustomersAndProducts`
+-- Database: `CustomersAndProducts`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `customers`
+-- Table structure for table `customers`
 --
 
 CREATE TABLE IF NOT EXISTS `customers` (
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `customers` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `customers`
+-- Dumping data for table `customers`
 --
 
 INSERT INTO `customers` (`id`, `number`, `name`, `phone`, `other_details`, `created`, `modified`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `customers` (`id`, `number`, `name`, `phone`, `other_details`, `crea
 -- --------------------------------------------------------
 
 --
--- Structure de la table `customer_product`
+-- Table structure for table `customer_product`
 --
 
 CREATE TABLE IF NOT EXISTS `customer_product` (
@@ -57,12 +57,57 @@ CREATE TABLE IF NOT EXISTS `customer_product` (
   `other_details` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `products`
+-- Table structure for table `files`
+--
+
+CREATE TABLE IF NOT EXISTS `files` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `path` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 = Active, 0 = Inactive'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `files`
+--
+
+INSERT INTO `files` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
+(1, 'lesbboys.jpg', 'Files/', '2018-10-09 16:48:19', '2018-10-09 16:48:19', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `i18n`
+--
+
+CREATE TABLE IF NOT EXISTS `i18n` (
+  `id` int(11) NOT NULL,
+  `locale` varchar(6) COLLATE utf8_unicode_ci NOT NULL,
+  `model` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `foreign_key` int(10) NOT NULL,
+  `field` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `i18n`
+--
+
+INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) VALUES
+(1, 'fr_CA', 'Products', 2, 'name', 'Manette de jeu'),
+(2, 'es', 'Products', 2, 'name', 'Controlador');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
 --
 
 CREATE TABLE IF NOT EXISTS `products` (
@@ -77,16 +122,35 @@ CREATE TABLE IF NOT EXISTS `products` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `created`, `modified`, `type_id`, `color`, `store_quantity`) VALUES
-(2, 'Manette de jeu', 25.99, '2018-09-21 14:53:35', '2018-09-21 14:53:35', 5, 'Blanc', 25);
+(2, 'Game controller', 25.99, '2018-09-21 14:53:35', '2018-10-10 20:27:11', 5, 'Blanc', 25);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `types`
+-- Table structure for table `product_file`
+--
+
+CREATE TABLE IF NOT EXISTS `product_file` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `file_id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `product_file`
+--
+
+INSERT INTO `product_file` (`id`, `product_id`, `file_id`) VALUES
+(1, 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `types`
 --
 
 CREATE TABLE IF NOT EXISTS `types` (
@@ -95,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `types` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `types`
+-- Dumping data for table `types`
 --
 
 INSERT INTO `types` (`id`, `description`) VALUES
@@ -105,7 +169,7 @@ INSERT INTO `types` (`id`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -117,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Contenu de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `created`, `modified`) VALUES
@@ -133,17 +197,17 @@ INSERT INTO `users` (`id`, `email`, `password`, `created`, `modified`) VALUES
 (10, 'kev@vendeur.com', '$2y$10$DSHtMisx9SoEO2hA.42wJufjtmaLojbb1BoEpBGjLkSXPRp1f1ZGa', '2018-09-24 15:01:15', '2018-09-24 15:01:15');
 
 --
--- Index pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `customers`
+-- Indexes for table `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `customer_product`
+-- Indexes for table `customer_product`
 --
 ALTER TABLE `customer_product`
   ADD PRIMARY KEY (`id`),
@@ -151,69 +215,113 @@ ALTER TABLE `customer_product`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Index pour la table `products`
+-- Indexes for table `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `i18n`
+--
+ALTER TABLE `i18n`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `I18N_LOCALE_FIELD` (`locale`,`model`,`foreign_key`,`field`),
+  ADD KEY `I18N_FIELD` (`model`,`foreign_key`,`field`);
+
+--
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `type_id` (`type_id`);
 
 --
--- Index pour la table `types`
+-- Indexes for table `product_file`
+--
+ALTER TABLE `product_file`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `file_id` (`file_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Indexes for table `types`
 --
 ALTER TABLE `types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `customers`
+-- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT pour la table `customer_product`
+-- AUTO_INCREMENT for table `customer_product`
 --
 ALTER TABLE `customer_product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `files`
+--
+ALTER TABLE `files`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `products`
+-- AUTO_INCREMENT for table `i18n`
+--
+ALTER TABLE `i18n`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT pour la table `types`
+-- AUTO_INCREMENT for table `product_file`
+--
+ALTER TABLE `product_file`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `types`
 --
 ALTER TABLE `types`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT pour la table `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
--- Contraintes pour les tables exportées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `customer_product`
+-- Constraints for table `customer_product`
 --
 ALTER TABLE `customer_product`
   ADD CONSTRAINT `customer_product_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`),
   ADD CONSTRAINT `customer_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
--- Contraintes pour la table `products`
+-- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `types` (`id`);
+
+--
+-- Constraints for table `product_file`
+--
+ALTER TABLE `product_file`
+  ADD CONSTRAINT `product_file_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `product_file_ibfk_2` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

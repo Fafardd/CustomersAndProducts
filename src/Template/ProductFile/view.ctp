@@ -28,9 +28,9 @@
             <th scope="row"><?= __('File') ?></th>
             <td><?= $productFile->has('file') ? $this->Html->link($productFile->file->name, ['controller' => 'Files', 'action' => 'view', $productFile->file->id]) : '' ?></td>
         </tr>
-        <tr>
+        <!--<tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($productFile->id) ?></td>
-        </tr>
+        </tr>-->
     </table>
 </div>

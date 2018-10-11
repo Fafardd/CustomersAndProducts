@@ -26,10 +26,10 @@
             <th scope="row"><?= __('Path') ?></th>
             <td><?= h($file->path) ?></td>
         </tr>
-        <tr>
+        <!--<tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($file->id) ?></td>
-        </tr>
+        </tr>-->
         <tr>
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($file->modified) ?></td>
@@ -48,14 +48,14 @@
         <?php if (!empty($file->product_file)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
+                <!--<th scope="col"><?= __('Id') ?></th>-->
                 <th scope="col"><?= __('Product Id') ?></th>
                 <th scope="col"><?= __('File Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($file->product_file as $productFile): ?>
             <tr>
-                <td><?= h($productFile->id) ?></td>
+                <!--<td><?= h($productFile->id) ?></td>-->
                 <td><?= h($productFile->product_id) ?></td>
                 <td><?= h($productFile->file_id) ?></td>
                 <td class="actions">

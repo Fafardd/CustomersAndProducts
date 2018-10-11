@@ -19,7 +19,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('product_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('file_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -28,7 +28,7 @@
         <tbody>
             <?php foreach ($productFile as $productFile): ?>
             <tr>
-                <td><?= $this->Number->format($productFile->id) ?></td>
+                <!--<td><?= $this->Number->format($productFile->id) ?></td>-->
                 <td><?= $productFile->has('product') ? $this->Html->link($productFile->product->name, ['controller' => 'Products', 'action' => 'view', $productFile->product->id]) : '' ?></td>
                 <td><?= $productFile->has('file') ? $this->Html->link($productFile->file->name, ['controller' => 'Files', 'action' => 'view', $productFile->file->id]) : '' ?></td>
                 <td class="actions">

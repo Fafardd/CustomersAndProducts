@@ -13,9 +13,21 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController {
 
+    public function isAuthorized($user) {
+        if(in_array($action, ['edit', 'delete', 'view'])){
+            if(strpos(($user['email']), 'admin') !==false ){
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['logout', 'add', 'edit']);
+        $this->Auth->allow(['logout', 'add']);
     }
 
     public function login() {
@@ -56,6 +68,10 @@ class UsersController extends AppController {
         $user = $this->Users->get($id);
 
         $this->set('user', $user);
+    }
+
+    public function aPropos(){
+
     }
 
     /**

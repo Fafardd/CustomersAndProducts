@@ -34,10 +34,10 @@
             <th scope="row"><?= __('Color') ?></th>
             <td><?= h($product->color) ?></td>
         </tr>
-        <tr>
+        <!--<tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($product->id) ?></td>
-        </tr>
+        </tr>-->
         <tr>
             <th scope="row"><?= __('Price') ?></th>
             <td><?= $this->Number->format($product->price) ?></td>

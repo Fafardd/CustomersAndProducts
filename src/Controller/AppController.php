@@ -70,7 +70,7 @@ class AppController extends Controller {
 
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['display', 'view', 'index', 'changelang']);
+        $this->Auth->allow(['display', 'view', 'index', 'changelang', 'apropos']);
     }
 
     /*
@@ -80,7 +80,7 @@ class AppController extends Controller {
 
     //$this->loadComponent('Security');
 
-    public function isAuthorized($user) {
+    /*public function isAuthorized($user) {
         // By default deny access.
         $action = $this->request->getParam('action');
         
@@ -98,7 +98,7 @@ class AppController extends Controller {
             return false;
         }
     
-    }
+    }*/
 
     public function changeLang($lang = 'en_US') {
         I18n::setLocale($lang);
