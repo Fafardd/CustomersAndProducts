@@ -22,7 +22,7 @@ class ProductsController extends AppController
                 return true;
             }
         } else if(in_array($action, ['view', 'add'])){
-            if(strpos(($user['email']), 'vendeur') !==false){
+            if(strpos(($user['email']), 'vendeur') !==false || strpos(($user['email']), 'admin') !==false){
             return true;
             }
         } else {

@@ -12,12 +12,30 @@ use App\Controller\AppController;
  */
 class TypesController extends AppController
 {
+
+    public function findTypes(){
+        if($this->request->is('ajax')){
+
+            $this->autorender = false;
+            $descriptions = $this->request->query['term'];
+            $results = $this->Types->find('all', array(
+                'conditions' => array('Types.descriptions LIKE ' => '%' . $descriptions . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result){
+                $resultArr[] = array('label' => $result['descriptions'], 'value' =>$result['descriptions']);
+            }
+            echo json_encode($resultArr);
+
+        }
+    }
     
     public function isAuthorized($user) {
         // By default deny access.
         $action = $this->request->getParam('action');
         
-        if(in_array($action, ['edit', 'delete'])){
+        if(in_array($action, ['edit', 'delete', 'add'])){
             if(strpos(($user['email']), 'admin') !==false ){
                 return true;
             }
@@ -25,7 +43,9 @@ class TypesController extends AppController
             if(strpos(($user['email']), 'vendeur') !==false){
             return true;
             }
-        } else {
+        } else if(in_array($action, ['autocomplete', 'findTypes'])){
+            return true;
+        }else {
             return false;
         }
     }

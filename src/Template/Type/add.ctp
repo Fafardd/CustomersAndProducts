@@ -4,6 +4,19 @@
  * @var \App\Model\Entity\Type $type
  */
 ?>
+
+
+<!--<?php
+$urlToTypesAutocompletedemoJson = $this->Url->build([
+    "controller" => "Types",
+    "action" => "findTypes",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToTypesAutocompletedemoJson . '";', ['block' => true]);
+echo $this->Html->script('Cars/autocompletedemo', ['block' => 'scriptBottom']);
+?>-->
+
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -17,7 +30,7 @@
     <fieldset>
         <legend><?= __('Add Type') ?></legend>
         <?php
-            echo $this->Form->control('description');
+            echo $this->Form->input('description', ['id' => 'autocomplete']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
