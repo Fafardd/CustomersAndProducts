@@ -13,23 +13,7 @@ use App\Controller\AppController;
 class TypesController extends AppController
 {
 
-    public function findTypes(){
-        if($this->request->is('ajax')){
-
-            $this->autorender = false;
-            $descriptions = $this->request->query['term'];
-            $results = $this->Types->find('all', array(
-                'conditions' => array('Types.descriptions LIKE ' => '%' . $descriptions . '%')
-            ));
-
-            $resultArr = array();
-            foreach ($results as $result){
-                $resultArr[] = array('label' => $result['descriptions'], 'value' =>$result['descriptions']);
-            }
-            echo json_encode($resultArr);
-
-        }
-    }
+    
     
     public function isAuthorized($user) {
         // By default deny access.
@@ -59,6 +43,24 @@ class TypesController extends AppController
         $types = $this->paginate($this->Types);
 
         $this->set(compact('types'));
+    }
+
+    public function findTypes(){
+        if($this->request->is('ajax')){
+
+            $this->autorender = false;
+            $description = $this->request->query['term'];
+            $results = $this->Types->find('all', array(
+                'conditions' => array('Types.description LIKE ' => '%' . $description . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result){
+                $resultArr[] = array('label' => $result['description'], 'value' =>$result['description']);
+            }
+            echo json_encode($resultArr);
+
+        }
     }
 
     /**

@@ -24,7 +24,7 @@ echo $this->Html->script('Types/autocomplete', ['block' => 'scriptBottom']);
     </ul>
 </nav>
 <div class="types form large-9 medium-8 columns content">
-    <?= $this->Form->create($type) ?>
+    <?= $this->Form->create("Types") ?>
     <fieldset>
         <legend><?= __('Add Type') ?></legend>
         <?php
