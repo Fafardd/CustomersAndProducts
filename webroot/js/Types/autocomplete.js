@@ -5,5 +5,6 @@
         source: autoCompleteSource,        
         minLength: 1
     });
+    console.log("123");
 })(jQuery);
 

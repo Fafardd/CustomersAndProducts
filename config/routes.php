@@ -23,6 +23,7 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+Router::mapResources(['Types']);
 Router::extensions(['json', 'xml']);
 
 //Router::extensions(['json','xml'])
@@ -49,6 +50,10 @@ Router::extensions(['json', 'xml']);
  *
  */
 Router::defaultRouteClass(DashedRoute::class);
+	Router::prefix('api', function ($routes) {
+		$routes->extensions(['json', 'xml']);
+		$routes->resources('Types');
+	});
 
 Router::scope('/', function (RouteBuilder $routes) {
     /**

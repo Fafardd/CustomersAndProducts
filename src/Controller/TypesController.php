@@ -45,22 +45,24 @@ class TypesController extends AppController
         $this->set(compact('types'));
     }
 
-    public function findTypes(){
-        if($this->request->is('ajax')){
-
-            $this->autorender = false;
+    public function findTypes() {
+        if ($this->request->is('ajax')) {
+            $this->autoRender = false;
             $description = $this->request->query['term'];
             $results = $this->Types->find('all', array(
                 'conditions' => array('Types.description LIKE ' => '%' . $description . '%')
             ));
-
+            
             $resultArr = array();
-            foreach ($results as $result){
-                $resultArr[] = array('label' => $result['description'], 'value' =>$result['description']);
+            foreach ($results as $result) {
+                $resultArr[] = array('label' => $result['description'], 'value' => $result['description']);
             }
             echo json_encode($resultArr);
-
         }
+    }
+
+    public function autocomplete() {
+        
     }
 
     /**
