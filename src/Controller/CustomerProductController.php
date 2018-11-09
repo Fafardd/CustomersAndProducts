@@ -16,11 +16,11 @@ class CustomerProductController extends AppController
         // By default deny access.
         $action = $this->request->getParam('action');
         
-        if(in_array($action, ['edit', 'delete'])){
+        if(in_array($action, ['edit', 'delete', 'getByType'])){
             if(strpos(($user['email']), 'admin') !==false ){
                 return true;
             }
-        } else if(in_array($action, ['view', 'add'])){
+        } else if(in_array($action, ['view', 'add', 'getByType'])){
             return true;
         } else {
             return false;
@@ -74,9 +74,20 @@ class CustomerProductController extends AppController
             }
             $this->Flash->error(__('The customer product could not be saved. Please, try again.'));
         }
+        $this->loadModel('Types');
+        $types = $this->Types->find('list', ['limit' =>200]);
+
+        $types = $types->toArray();
+        reset($types);
+        $type_id = key($types);
+
+        $products = $this->CustomerProduct->Products->find('list',[
+            'conditions' => ['Products.type_id' => $type_id],
+        ]);
+
         $customers = $this->CustomerProduct->Customers->find('list', ['limit' => 200]);
-        $products = $this->CustomerProduct->Products->find('list', ['limit' => 200]);
-        $this->set(compact('customerProduct', 'customers', 'products'));
+        //$products = $this->CustomerProduct->Products->find('list', ['limit' => 200]);
+        $this->set(compact('customerProduct', 'customers', 'products','types'));
     }
 
     /**
@@ -123,5 +134,15 @@ class CustomerProductController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function getByType() {
+        $type_id = $this->request->query('type_id');
+
+        $products = $this->products->find('all', [
+            'conditions' => ['products.type_id' => $type_id],
+        ]);
+        $this->set('products', $products);
+        $this->set('_serialize', ['products']);
     }
 }

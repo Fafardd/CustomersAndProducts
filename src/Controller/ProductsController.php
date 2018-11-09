@@ -17,11 +17,11 @@ class ProductsController extends AppController
         // By default deny access.
         $action = $this->request->getParam('action');
         
-        if(in_array($action, ['edit', 'delete'])){
+        if(in_array($action, ['edit', 'delete','getByType'])){
             if(strpos(($user['email']), 'admin') !==false ){
                 return true;
             }
-        } else if(in_array($action, ['view', 'add'])){
+        } else if(in_array($action, ['view', 'add', 'getByType'])){
             if(strpos(($user['email']), 'vendeur') !==false || strpos(($user['email']), 'admin') !==false){
             return true;
             }
@@ -29,6 +29,7 @@ class ProductsController extends AppController
             return false;
         }
     }
+
 
     /**
      * Index method
@@ -126,4 +127,13 @@ class ProductsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function getByType() {
+        $type_id = $this->request->query('type_id');
+        $products = $this->Products->find('all', [
+            'conditions' => ['Products.type_id' => $type_id],
+        ]);
+        $this->set('products', $products);
+        $this->set('_serialize', ['products']);
+    }	
 }
