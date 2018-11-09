@@ -7,8 +7,11 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Type') ?></th>
-            <td><?= $product->has('type') ? $this->Html->link($product->type->description, ['controller' => 'Types', 'action' => 'view', $product->type->id]) : '' ?></td>
+            <!--<td><?= $product->has('type') ? $this->Html->link($product->type->description, ['controller' => 'Types', 'action' => 'view', $product->type->id]) : '' ?></td>
+            -->
+            <td><?= h($product->type['description']) ?></td>
         </tr>
+
         <tr>
             <th scope="row"><?= __('Color') ?></th>
             <td><?= h($product->color) ?></td>

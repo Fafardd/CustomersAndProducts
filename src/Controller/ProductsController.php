@@ -61,7 +61,7 @@ class ProductsController extends AppController
         $this->viewBuilder()->options([
             'pdfConfig' => [
                 'orientation' => 'portrait',
-                'filename' => 'Product_' . $id
+                'filename' => 'Product_' . $id . '.pdf'
             ]
         ]);
         $this->set('product', $product);
