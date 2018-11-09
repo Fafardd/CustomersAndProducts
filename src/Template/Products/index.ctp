@@ -44,10 +44,17 @@
                 <td><?= h($product->color) ?></td>
                 <td><?= $this->Number->format($product->store_quantity) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
-                    <?= $this->Html->link(__('(pdf)'), ['action' => 'view', $product->id . '.pdf']) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?>
+                <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li><?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?></li>
+                    <li><?= $this->Html->link(__('(pdf)'), ['action' => 'view', $product->id . '.pdf']) ?></li>
+                    <li><?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?></li>
+                    <li><?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?></li>
+                    </ul>
+</div>
                 </td>
             </tr>
             <?php endforeach; ?>
