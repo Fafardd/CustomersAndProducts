@@ -3,6 +3,20 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Type $type
  */
+
+$urlToTypesAutocompleteJson = $this->Url->build([
+    "controller" => "Types",
+    "action" => "findTypes",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToTypesAutocompleteJson . '";', ['block' => true]);
+echo $this->Html->script('Types/autocomplete', ['block' => 'scriptBottom']);
+?>
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Type $type
+ */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -23,7 +37,7 @@
     <fieldset>
         <legend><?= __('Edit Type') ?></legend>
         <?php
-            echo $this->Form->control('description');
+            echo $this->Form->control('description' ,['id' => 'autocomplete']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
