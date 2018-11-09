@@ -1,31 +1,75 @@
 function getTypes() {
     $.ajax({
-        type: 'POST',
-        url: 'typeAction.php',
-        data: 'action_type=view&' + $("#typeForm").serialize(),
-        success: function (html) {
-            $('#typeData').html(html);
-        }
+        type: 'GET',
+        url: urlToRestApi,
+        dataType: "json",
+        success:
+                function (types) {
+                    var typeTable = $('#typeData');
+                    typeTable.empty();
+                    var count = 1;
+                    $.each(types.data, function (key, value)
+                    {
+                        var editDeleteButtons = '</td><td>' +
+                                '<a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editType(' + value.id + ')"></a>' +
+                                '<a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm(\'Are you sure to delete data?\') ? typeAction(\'delete\', ' + value.id + ') : false;"></a>' +
+                                '</td></tr>';
+                        typeTable.append('<tr><td>' + value.id + '</td><td>' + value.description + '</td><td>' + editDeleteButtons);
+                        count++;
+                    });
+
+                }
     });
 }
+
+/* Function takes a jquery form
+ and converts it to a JSON dictionary */
+function convertFormToJSON(form) {
+    var array = $(form).serializeArray();
+    var json = {};
+
+    $.each(array, function () {
+        json[this.name] = this.value || '';
+    });
+
+    return json;
+}
+
+/*
+ $('#typeAddForm').submit(function (e) {
+ e.preventDefault();
+ var data = convertFormToJSON($(this));
+ alert(data);
+ console.log(data);
+ });
+ */
 
 function typeAction(type, id) {
     id = (typeof id == "undefined") ? '' : id;
     var statusArr = {add: "added", edit: "updated", delete: "deleted"};
+    var requestType = '';
     var typeData = '';
+    var ajaxUrl = urlToRestApi;
     if (type == 'add') {
-        typeData = $("#addForm").find('.form').serialize() + '&action_type=' + type + '&id=' + id;
+        requestType = 'POST';
+        typeData = convertFormToJSON($("#addForm").find('.form'));
     } else if (type == 'edit') {
-        typeData = $("#editForm").find('.form').serialize() + '&action_type=' + type;
+        requestType = 'PUT';
+		ajaxUrl = ajaxUrl + "/" + idEdit.value;
+        typeData = convertFormToJSON($("#editForm").find('.form'));
+		
     } else {
-        typeData = 'action_type=' + type + '&id=' + id;
+        requestType = 'DELETE';
+        ajaxUrl = ajaxUrl + "/" + id;
     }
     $.ajax({
-        type: 'POST',
-        url: 'typeAction.php',
-        data: typeData,
+        type: requestType,
+        url: ajaxUrl,
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(typeData),
         success: function (msg) {
-            if (msg == 'ok') {
+            if (msg) {
                 alert('Type data has been ' + statusArr[type] + ' successfully.');
                 getTypes();
                 $('.form')[0].reset();
@@ -37,15 +81,17 @@ function typeAction(type, id) {
     });
 }
 
+/*** à déboguer ... ***/
 function editType(id) {
     $.ajax({
-        type: 'POST',
+        type: 'GET',
         dataType: 'JSON',
-        url: 'typeAction.php',
-        data: 'action_type=data&id=' + id,
+        url: urlToRestApi+ "/" + id,
         success: function (data) {
-            $('#idEdit').val(data.id);
-            $('#descriptionEdit').val(data.description);
+            $('#idEdit').val(data.data.id);
+            $('#nameEdit').val(data.data.name);
+            $('#descriptionEdit').val(data.data.description);
+            $('#editForm').slideDown();
         }
     });
 }
