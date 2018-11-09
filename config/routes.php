@@ -23,8 +23,8 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
-Router::mapResources(['Types']);
-Router::extensions(['json', 'xml']);
+Router::mapResources(['Products']);
+Router::extensions(['json', 'xml', 'pdf']);
 
 //Router::extensions(['json','xml'])
 

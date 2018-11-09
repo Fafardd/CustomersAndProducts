@@ -17,11 +17,11 @@ class ProductsController extends AppController
         // By default deny access.
         $action = $this->request->getParam('action');
         
-        if(in_array($action, ['edit', 'delete','getByType'])){
+        if(in_array($action, ['edit', 'delete','getByType', 'RequestHandler'])){
             if(strpos(($user['email']), 'admin') !==false ){
                 return true;
             }
-        } else if(in_array($action, ['view', 'add', 'getByType'])){
+        } else if(in_array($action, ['view', 'add', 'getByType', 'RequestHandler'])){
             if(strpos(($user['email']), 'vendeur') !==false || strpos(($user['email']), 'admin') !==false){
             return true;
             }
@@ -58,7 +58,12 @@ class ProductsController extends AppController
         $product = $this->Products->get($id, [
             'contain' => ['Types', 'CustomerProduct', 'ProductFile']
         ]);
-
+        $this->viewBuilder()->options([
+            'pdfConfig' => [
+                'orientation' => 'portrait',
+                'filename' => 'Product_' . $id
+            ]
+        ]);
         $this->set('product', $product);
     }
 

@@ -45,6 +45,7 @@
                 <td><?= $this->Number->format($product->store_quantity) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
+                    <?= $this->Html->link(__('(pdf)'), ['action' => 'view', $book->id . '.pdf']) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?>
                 </td>
