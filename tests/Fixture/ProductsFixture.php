@@ -49,13 +49,25 @@ class ProductsFixture extends TestFixture
         $this->records = [
             [
                 'id' => 1,
-                'name' => 'Lorem ipsum dolor sit amet',
+                'name' => 'test1',
                 'price' => 1,
                 'created' => '2018-09-28 14:16:52',
                 'modified' => '2018-09-28 14:16:52',
                 'type_id' => 1,
-                'color' => 'Lorem ipsum dolor sit amet',
-                'store_quantity' => 1
+                'color' => 'test1',
+                'store_quantity' => 1,
+                'actif' => 1
+            ],
+            [
+                'id' => 2,
+                'name' => 'test2',
+                'price' => 2,
+                'created' => '2018-09-28 14:16:52',
+                'modified' => '2018-09-28 14:16:52',
+                'type_id' => 2,
+                'color' => 'test2',
+                'store_quantity' => 2,
+                'actif' => 0
             ],
         ];
         parent::init();

@@ -682,3 +682,46 @@ Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 150
 
 
 
+2018-11-13 23:07:29 Notice: Deprecated (16384): App\Model\Table\ProductsTable::alias() is deprecated. Use setAlias()/getAlias() instead. - C:\Program Files (x86)\Ampps\www\CustomersAndProducts\src\Model\Table\ProductsTable.php, line: 113
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Program Files (x86)\Ampps\www\CustomersAndProducts\vendor\cakephp\cakephp\src\Core\functions.php, line 310]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+deprecationWarning - CORE\src\Core\functions.php, line 310
+Cake\ORM\Table::alias() - CORE\src\ORM\Table.php, line 421
+App\Model\Table\ProductsTable::findActif() - APP/Model\Table\ProductsTable.php, line 113
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 2406
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 1353
+App\Test\TestCase\Model\Table\ProductsTableTest::testFindActif() - ROOT\tests\TestCase\Model\Table\ProductsTableTest.php, line 89
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/TextUI/TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/TextUI/Command.php, line 195
+PHPUnit\TextUI\Command::main() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/TextUI/Command.php, line 148
+[main] - ROOT\phpunit.phar, line 570
+
+
+
+2018-11-13 23:07:29 Notice: Deprecated (16384): Query::hydrate() is deprecated. Use enableHydration()/isHydrationEnabled() instead. - C:\Program Files (x86)\Ampps\www\CustomersAndProducts\tests\TestCase\Model\Table\ProductsTableTest.php, line: 91
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [C:\Program Files (x86)\Ampps\www\CustomersAndProducts\vendor\cakephp\cakephp\src\Core\functions.php, line 310]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+deprecationWarning - CORE\src\Core\functions.php, line 310
+Cake\ORM\Query::hydrate() - CORE\src\ORM\Query.php, line 1037
+App\Test\TestCase\Model\Table\ProductsTableTest::testFindActif() - ROOT\tests\TestCase\Model\Table\ProductsTableTest.php, line 91
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/Framework/TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/TextUI/TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/TextUI/Command.php, line 195
+PHPUnit\TextUI\Command::main() - phar://C:/Program Files (x86)/Ampps/www/CustomersAndProducts/phpunit.phar/phpunit/TextUI/Command.php, line 148
+[main] - ROOT\phpunit.phar, line 570
+
+
+
