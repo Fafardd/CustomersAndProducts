@@ -12,25 +12,11 @@
 <h2>Kevin Fafard</h2>
 <p>420-5B7-MO , Automne 2018 , Collège Montmorency</p>
 <h3>Ce qui a été complété</h3>
-    <p>J'ai réussi à tout faire sauf pour ce qui est de l'envoi de courriel. De plus, comme expliqué plus bas, je n'ai pas fait toute les sécurisations
-    pour le controller utilisateur. Juste vous mentionner aussi que ma traduction a été faite avant la création de ma table File puisque j'ai fais
-    le travail dans l'ordre des consignes. Merci de votre compréhension. Vous pouvez aussi observer mes nombreux commit sur mon github puisque
-    j'utilise énormément ce programme de gestion de code.</p>
-<h3>Utilisateur régulier</h3>
- <p>Vous créer un nouvel utilisateur. Vous pouvez seulement voir tous les views et créer une commande de produits. Ce qui n'a pas été fait est
- la gestion afin de voir aucun utilisateur. </p>
- 
-<h3>Super-Utilisateur</h3>
-
-	<p>Afin de créer un super utilisateur, il ne faut que simplement avoir le mot vendeur dans le courriel a un endroit. C'est
-        une méthode très peu fiable mais je vous en avait parlé en classe et pour le TP1 c'était assez. Celui-ci, contrairement aux utilisateurs
-        réguliers, peut créer des produits.
-    </p>
-	
-<h3>Admin</h3>
-	<p>
-        Fonctionne de la même façon que les super-utilisateur, il ne faut qu'avoir admin dans le courriel.
-    </p>
+    <p>J'ai effectué la lecture, la suppression, l'ajout et la modification en Ajax avec l'index de Type. Les tests ont été effectués avec
+    la table Customer. La liste lié est dans le add de customer-product. Le autocomplete est dans le add et le edit de la table Type.
+    Le bootrap est loadé dans chacune de mes pages et le pdf se fait avec la table Products.</p>
+<h3>Ce qui ne fonctionne pas</h3>
+ <p>Je n'ai pas fait l'interface avec préfixe de routage "Admin". </p>
 	
 <h3>Diagramme BD</h3>
 <?php echo $this->Html->image('bd.jpg', ['alt' => 'Base de données']); ?>
