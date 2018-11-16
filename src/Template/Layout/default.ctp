@@ -48,7 +48,9 @@ echo $this->Html->script([
         <?php
         echo $this->Html->script([
             'https://code.jquery.com/jquery-1.12.4.js',
-            'https://code.jquery.com/ui/1.12.1/jquery-ui.js'
+            'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+
+            'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js'
                 ], ['block' => 'scriptLibraries']
         );
         ?>

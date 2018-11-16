@@ -141,4 +141,12 @@ class ProductsController extends AppController
         $this->set('products', $products);
         $this->set('_serialize', ['products']);
     }	
+    
+        public function getProductsSortedByTypes() {
+        $types = $this->Products->Types->find('all', [
+            'contain' => ['Products'],
+        ]);
+        $this->set('types',$types);
+        $this->set('_serialize', ['types']);
+    }
 }

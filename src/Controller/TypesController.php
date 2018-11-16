@@ -19,15 +19,15 @@ class TypesController extends AppController
         // By default deny access.
         $action = $this->request->getParam('action');
         
-        if(in_array($action, ['edit', 'delete', 'add'])){
+        if(in_array($action, ['edit', 'delete', 'add', 'getTypes'])){
             if(strpos(($user['email']), 'admin') !==false ){
                 return true;
             }
-        } else if(in_array($action, ['view', 'add'])){
+        } else if(in_array($action, ['view', 'add', 'getTypes'])){
             if(strpos(($user['email']), 'vendeur') !==false){
             return true;
             }
-        } else if(in_array($action, ['autocomplete', 'findTypes'])){
+        } else if(in_array($action, ['autocomplete', 'findTypes', 'getTypes'])){
             return true;
         }else {
             return false;
@@ -143,5 +143,18 @@ class TypesController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function getTypes() {
+        $this->autoRender = false; // avoid to render view
+
+        $types = $this->Types->find('all', [
+            'contain' => ['Products'],
+        ]);
+
+        $typesJ = json_encode($types);
+        $this->response->type('json');
+        $this->response->body($typesJ);
+
     }
 }
