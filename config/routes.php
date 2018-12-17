@@ -25,6 +25,7 @@ use Cake\Routing\Route\DashedRoute;
 
 Router::mapResources(['Products']);
 Router::extensions(['json', 'xml', 'pdf']);
+Router::prefix('Admin', function ($routes) { $routes->fallbacks('InflectedRoute'); });
 
 //Router::extensions(['json','xml'])
 
@@ -52,10 +53,16 @@ Router::extensions(['json', 'xml', 'pdf']);
 Router::defaultRouteClass(DashedRoute::class);
 	Router::prefix('api', function ($routes) {
 		$routes->extensions(['json', 'xml']);
-		$routes->resources('Types');
+        $routes->resources('Types');
+        $routes->resources('Users');
+		Router::connect('/api/users/register', ['controller' => 'Users', 'action' => 'add', 'prefix' => 'api']);
+		$routes->fallbacks('InflectedRoute');
 	});
 
 Router::scope('/', function (RouteBuilder $routes) {
+
+    $routes->resources('Users');
+    $routes->connect('/', ['controller' => 'users', 'action' => 'login', 'home']);
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
      * its action called 'display', and we pass a param to select the view file
@@ -86,3 +93,4 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->fallbacks(DashedRoute::class);
 });
+Plugin::routes();

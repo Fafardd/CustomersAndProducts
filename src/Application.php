@@ -35,8 +35,9 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
-        $this->addPlugin('Crud');
 
+        $this->addPlugin('Crud');
+        $this->addPlugin('ADmad/JwtAuth');
         $this->addPlugin('DebugKit');
 
         // Call parent to load bootstrap from files.
@@ -83,7 +84,8 @@ class Application extends BaseApplication
             // Routes collection cache enabled by default, to disable route caching
             // pass null as cacheConfig, example: `new RoutingMiddleware($this)`
             // you might want to disable this cache in case your routing is extremely simple
-            ->add(new RoutingMiddleware($this, '_cake_routes_'))
+            
+            ->add(new RoutingMiddleware($this, '_cake_routes_'));
 
             // Add csrf middleware.
             ;

@@ -77,6 +77,10 @@ class ComposerStaticInit3c470f6bfad535097712bc7d56866a79
             'JsonSchema\\' => 11,
             'Jasny\\Twig\\' => 11,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'D' => 
         array (
             'DebugKit\\Test\\Fixture\\' => 22,
@@ -107,6 +111,7 @@ class ComposerStaticInit3c470f6bfad535097712bc7d56866a79
             'App\\Test\\' => 9,
             'App\\' => 4,
             'Ajgl\\Twig\\Extension\\' => 20,
+            'ADmad\\JwtAuth\\' => 14,
         ),
     );
 
@@ -211,6 +216,10 @@ class ComposerStaticInit3c470f6bfad535097712bc7d56866a79
         array (
             0 => __DIR__ . '/..' . '/jasny/twig-extensions/src',
         ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'DebugKit\\Test\\Fixture\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/debug_kit/tests/Fixture',
@@ -286,6 +295,10 @@ class ComposerStaticInit3c470f6bfad535097712bc7d56866a79
         'Ajgl\\Twig\\Extension\\' => 
         array (
             0 => __DIR__ . '/..' . '/ajgl/breakpoint-twig-extension/src',
+        ),
+        'ADmad\\JwtAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/admad/cakephp-jwt-auth/src',
         ),
     );
 

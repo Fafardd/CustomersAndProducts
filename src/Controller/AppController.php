@@ -1,5 +1,4 @@
 <?php
-
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -13,13 +12,11 @@
  * @since     0.2.9
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
-
 namespace App\Controller;
-
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use \Crud\Controller\ControllerTrait;
 use Cake\I18n\I18n;
-
 /**
  * Application Controller
  *
@@ -28,11 +25,10 @@ use Cake\I18n\I18n;
  *
  * @link https://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
-class AppController extends Controller {
-
-
-    use \Crud\Controller\ControllerTrait;
-
+class AppController extends Controller
+{
+	
+	use \Crud\Controller\ControllerTrait;
     public $components = [
         'RequestHandler',
         'Crud.Crud' => [
@@ -43,11 +39,6 @@ class AppController extends Controller {
                 'Crud.Edit',
                 'Crud.Delete'
             ],
-            'listeners' => [
-                'Crud.Api',
-                'Crud.ApiPagination',
-                'Crud.ApiQueryLog'
-            ]
         ]
     ];
     /**
@@ -59,71 +50,48 @@ class AppController extends Controller {
      *
      * @return void
      */
-    public function initialize() {
+    public function initialize()
+    {
         parent::initialize();
-        I18n::setLocale($this->request->session()->read('Config.language'));
+		I18n::setLocale($this->request->session()->read('Config.language'));
         $this->loadComponent('RequestHandler', [
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
-
-        $this->loadComponent('Auth', [
-            // Added this line
-            'authorize' => 'Controller',
-            'authenticate' => [
-                'Form' => [
-                    'fields' => [
-                        'username' => 'email',
-                        'password' => 'password'
-                    ]
+    $this->loadComponent('Auth', [
+        // Added this line
+        'authorize'=> 'Controller',
+        'authenticate' => [
+            'Form' => [
+                'fields' => [
+                    'username' => 'email',
+                    'password' => 'password'
                 ]
-            ],
-            'loginAction' => [
-                'controller' => 'Users',
-                'action' => 'login'
-            ],
-            //use isAuthorized in Controllers
-            'authorize' => ['Controller'],
-            // If unauthorized, return them to page they were just on
-            'unauthorizedRedirect' => $this->referer()
-        ]);
-
-        // Allow the display action so our PagesController
-        // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['display', 'view', 'index', 'changelang', 'apropos','findTypes', 'getByType', 'getTypes']);
+            ]
+        ],
+        'loginAction' => [
+            'controller' => 'Users',
+            'action' => 'login'
+        ],
+        'authorize' => ['Controller'],
+         // If unauthorized, return them to page they were just on
+        'unauthorizedRedirect' => $this->referer()
+    ]);
+    // Allow the display action so our pages controller
+    // continues to work. Also enable the read only actions.
+    $this->Auth->allow(['display', 'view', 'index', 'changelang', 'apropos','findTypes', 'getByType', 'getTypes']);
+        /*
+         * Enable the following component for recommended CakePHP security settings.
+         * see https://book.cakephp.org/3.0/en/controllers/components/security.html
+         */
+        $this->loadComponent('Security');
     }
-
-    /*
-     * Enable the following component for recommended CakePHP security settings.
-     * see https://book.cakephp.org/3.0/en/controllers/components/security.html
-     */
-
-    //$this->loadComponent('Security');
-
-    /*public function isAuthorized($user) {
-        // By default deny access.
-        $action = $this->request->getParam('action');
-        
-        if(in_array($action, ['add'])){
-            if(strpos(($user['email']), 'vendeur') !==false || strpos(($user['email']), 'admin') !==false){
-                return true;
-            }
-        }else if(in_array($action, ['edit', 'delete'])){
-            if(strpos(($user['email']), 'admin') !==false ){
-                return true;
-            }
-        } else if(in_array($action, ['view'])){
-            return true;
-        } else {
-            return false;
-        }
     
-    }*/
-
-    public function changeLang($lang = 'en_US') {
-        I18n::setLocale($lang);
-        $this->request->session()->write('Config.language', $lang);
-        return $this->redirect($this->request->referer());
-    }
-
+    
+	
+	public function changeLang($lang = 'en_US') {
+    I18n::setLocale($lang);
+    $this->request->session()->write('Config.language', $lang);
+    return $this->redirect($this->request->referer());
+}
 }

@@ -72,6 +72,7 @@ Configure::write('CakePdf', [
     'download' => true
 ]);
  Plugin::load('CakePdf', ['bootstrap' => true]);
+ Plugin::load('ADmad/JwtAuth');
 
 /*
  * Read configuration file and inject configuration into various
